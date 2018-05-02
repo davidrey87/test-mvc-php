@@ -12,17 +12,17 @@
     <input type="hidden" name="idcategoria" value="<?php echo $categoria->idcategoria; ?>" />
 
     <div class="form-group">
-        <label>Nombre categoria</label>
+        <label>Nombre categoria </label>
         <input type="text" name="nombre" value="<?php echo $categoria->nombre; ?>" class="form-control" placeholder="Ingrese nombre del categoria" data-validacion-tipo="requerido|min:1" />
     </div>
 
     <div class="form-group">
-        <label>Descripción del categoria</label>
+        <label>Descripción del categoria </label>
         <input type="text" name="descripcion" value="<?php echo $categoria->descripcion; ?>" class="form-control" placeholder="Ingrese descripción de la categoria" data-validacion-tipo="requerido|min:1" />
     </div>
 
     <div class="form-group">
-        <label>Pregunta</label>
+        <label>Pregunta </label>
         <input type="text" name="pregunta" value="<?php echo $categoria->pregunta; ?>" class="form-control" placeholder="Ingrese una pregunta para la categoria" data-validacion-tipo="requerido|min:1" />
     </div>
 

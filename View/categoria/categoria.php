@@ -1,18 +1,14 @@
 <h1 class="page-header">Categorias</h1>
 
-<ol class="breadcrumb">
-    <li><a href="?c=administrador">Principal</a></li>
-    <li class="active">Categorias</li>
-    <li><a href="?c=categoria&a=Nuevo">Nuevo Categoria</a></li>
-</ol>
-
-<table class="table table-striped">
+<table class="table">
+    <a href="?c=categoria&a=Nuevo" class="btn btn-primary btn-sm pull-right"><b>+</b> Nueva Categoria</a>
     <thead>
         <tr>
-            <th style="width:30px;">ID</th>
-            <th style="width:70px;">Nombre</th>
-            <th style="width:500px;">Descripción</th>
-            <th style="width:300px;">Pregunta</th>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>DESCRIPCION</th>
+            <th>PREGUNTA</th>
+            <th>OPCIONES</th>
         </tr>
     </thead>
     <tbody>
@@ -22,11 +18,15 @@
             <td><?php echo $r['nombre']; ?></td>
             <td><?php echo $r['descripcion']; ?></td>
             <td><?php echo $r['pregunta']; ?></td>
-            <td>
-                <a onclick="$.redirect('index.php?c=categoria&a=obtener',{idcategoria: '<?php echo $r['idcategoria'];?>'});"  href="#">Editar<a/>
-            </td>
-            <td>
-                <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=categoria&a=Eliminar&idcategoria=<?php echo $r['idcategoria']; ?>">Eliminar</a>
+            <td class="text-center">
+                <div class = "row">
+                    <a onclick="$.redirect('index.php?c=categoria&a=obtener',{idcategoria: '<?php echo $r['idcategoria'];?>'});" class='btn btn-warning btn-xs' href="#">
+                        <span class="glyphicon glyphicon-edit"></span> 
+                    </a> 
+                    <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=categoria&a=Eliminar&idcategoria=<?php echo $r['idcategoria']; ?>" class="btn btn-danger btn-xs">
+                        <span class="glyphicon glyphicon-remove"></span> 
+                    </a>
+                </div>
             </td>
         </tr>
     <?php endforeach; ?>

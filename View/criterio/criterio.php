@@ -1,23 +1,14 @@
 <h1 class="page-header">Criterios</h1>
-<!--
-<div class="well well-sm text-right">
-    <a class="btn btn-primary" href="?c=metodologia&a=nuevo">Nueva Metodologia</a>
-    <a class="btn btn-primary" href="?c=criterio&a=nuevo">Nuevo Criterio</a>
-</div>
--->
-<ol class="breadcrumb">
-    <li><a href="?c=administrador">Principal</a></li>
-    <li class="active">Criterios</li>
-    <li><a href="?c=criterio&a=Nuevo">Nuevo Criterio</a></li>
-</ol>
 
 <table class="table table-striped">
+    <a href="?c=criterio&a=Nuevo" class="btn btn-primary btn-sm pull-right"><b>+</b> Nuevo Criterio</a>
     <thead>
         <tr>
-            <th style="width:30px;">ID</th>
-            <th style="width:200px;">Nombre</th>
-            <th style="width:450px;">Descripción</th>
-            <th style="width:120px;">Categoria</th>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>DESCRIPCION</th>
+            <th>CATEGORIA</th>
+            <th>OPCIONES</th>
         </tr>
     </thead>
     <tbody>
@@ -27,11 +18,15 @@
             <td><?php echo $r['nombre']; ?></td>
             <td><?php echo $r['descripcion']; ?></td>
             <td><?php echo $this->model_categoria->ObtenerNombre($r['idcategoria']); ?></td>
-            <td>
-                <a onclick="$.redirect('index.php?c=criterio&a=obtener',{idcriterio: '<?php echo $r['idcriterio'];?>'});"  href="#">Editar<a/>
-            </td>
-            <td>
-                <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=criterio&a=Eliminar&idcriterio=<?php echo $r['idcriterio']; ?>">Eliminar</a>
+            <td class="text-center">
+                <div class = "row">
+                    <a onclick="$.redirect('index.php?c=criterio&a=obtener',{idcriterio: '<?php echo $r['idcriterio'];?>'});" class='btn btn-warning btn-xs' href="#">
+                        <span class="glyphicon glyphicon-edit"></span> 
+                    </a> 
+                    <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=criterio&a=Eliminar&idcriterio=<?php echo $r['idcriterio']; ?>" class="btn btn-danger btn-xs">
+                        <span class="glyphicon glyphicon-remove"></span> 
+                    </a>
+                </div>
             </td>
         </tr>
     <?php endforeach; ?>

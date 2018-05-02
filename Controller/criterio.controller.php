@@ -38,7 +38,7 @@ class CriterioController{
 
     public function Eliminar(){
         $this->model->Eliminar($_REQUEST['idcriterio']);
-        header('Location: index.php');
+        header('Location: index.php?c=criterio');
     }
 
     public function Obtener(){

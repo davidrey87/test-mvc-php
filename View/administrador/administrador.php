@@ -1,7 +1,3 @@
-<h1 class="page-header">Metodologias</h1>
 
-<div class="well well-sm text-right">
-    <a class="btn btn-primary" href="?c=metodologia">Metodologias</a>
-    <a class="btn btn-primary" href="?c=categoria">Categorias</a>
-    <a class="btn btn-primary" href="?c=criterio">Criterios</a>
-</div>
+<h1> I am the main content </h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint assumenda quae aliquid voluptatibus quia, ea, ad natus magni repellat earum, culpa iure tempore. Enim dolor eaque minima voluptas ducimus?</p>

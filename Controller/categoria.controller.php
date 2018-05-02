@@ -31,7 +31,7 @@ class CategoriaController{
 
     public function Eliminar(){
         $this->model->Eliminar($_REQUEST['idcategoria']);
-        header('Location: index.php');
+        header('Location: index.php?c=categoria');
     }
 
     public function Obtener(){
@@ -53,7 +53,7 @@ class CategoriaController{
         $categoria->idcategoria = $_REQUEST['idcategoria'];
         $categoria->nombre = $_REQUEST['nombre'];
         $categoria->descripcion = $_REQUEST['descripcion'];
-        $categoria->pregunta = $row['pregunta'];
+        $categoria->pregunta = $_REQUEST['pregunta'];
         $this->model->Actualizar($categoria);
         header('Location: index.php?c=categoria');
     }

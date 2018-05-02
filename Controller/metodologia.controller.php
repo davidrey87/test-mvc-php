@@ -62,7 +62,7 @@ class MetodologiaController{
 
     public function Eliminar(){
         $this->model->Eliminar($_REQUEST['idmetodologia']);
-        header('Location: index.php');
+        header('Location: index.php?c=metodologia');
     }
 
     public function Editar(){

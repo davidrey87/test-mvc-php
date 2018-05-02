@@ -12,17 +12,17 @@
     <input type="hidden" name="idmetodologia" value="<?php echo $metodologia->idmetodologia; ?>" />
 
     <div class="form-group">
-        <label>Nombre Metodologia</label>
+        <label>Nombre Metodologia </label>
         <input type="text" name="nombre" value="<?php echo $metodologia->nombre; ?>" class="form-control" placeholder="Ingrese nombre de la Metodologia" data-validacion-tipo="requerido|min:1" />
     </div>
 
     <div class="form-group">
-        <label>Descripción de la Metodologia</label>
+        <label>Descripción de la Metodologia </label>
         <input type="text" name="descripcion" value="<?php echo $metodologia->descripcion; ?>" class="form-control" placeholder="Ingrese descripción de la Metodologia" data-validacion-tipo="requerido|min:1" />
     </div>
 
     <div class="form-group">
-        <label>URL</label>
+        <label>URL </label>
         <input type="text" name="url" value="<?php echo $metodologia->url; ?>" class="form-control" placeholder="Ingrese URL de la Metodologia" data-validacion-tipo="requerido|min:1" />
     </div>
 
