@@ -33,8 +33,14 @@
 
                 <ul class="list-unstyled components">
                     <li>
+                        <a href="?c=tipo">
+                            <i class="glyphicon glyphicon-paperclip"></i>
+                            Tipo
+                        </a>
+                    </li>
+                    <li>
                         <a href="?c=metodologia">
-                            <i class="glyphicon glyphicon-link"></i>
+                            <i class="glyphicon glyphicon-paperclip"></i>
                             Metodologias
                         </a>
                     </li>
@@ -46,8 +52,14 @@
                     </li>
                     <li>
                         <a href="?c=criterio">
-                            <i class="glyphicon glyphicon-send"></i>
+                        <i class="glyphicon glyphicon-paperclip"></i>
                             Criterios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?c=test">
+                        <i class="glyphicon glyphicon-paperclip"></i>
+                            Test
                         </a>
                     </li>
                 </ul>

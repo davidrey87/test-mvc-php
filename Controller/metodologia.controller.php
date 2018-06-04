@@ -3,18 +3,21 @@ require_once 'Model/metodologia.php';
 require_once 'Model/categoria.php';
 require_once 'Model/criterio.php';
 require_once 'Model/metodologia_criterio.php';
+require_once 'Model/tipo.php';
 
 class MetodologiaController{
     private $model;
     private $model_categoria;
     private $model_criterio;
     private $model_metodologia_criterio;
+    private $model_tipo;
 
     public function __CONSTRUCT(){
         $this->model = new metodologia();
         $this->model_categoria = new categoria();
         $this->model_criterio = new criterio(); 
         $this->model_metodologia_criterio = new metodologia_criterio();
+        $this->model_tipo = new tipo();
     }
     //Llamado vista principal para adimistrador
     public function Index(){
@@ -39,6 +42,7 @@ class MetodologiaController{
             $metodologia->nombre = $row['nombre'];
             $metodologia->descripcion = $row['descripcion'];
             $metodologia->url = $row['url'];
+            $metodologia->idtipo = $row['idtipo'];
         }
         if($_REQUEST['x'] == 'editar'){
             require_once 'View/header.php';
@@ -56,6 +60,7 @@ class MetodologiaController{
         $metodologia->nombre = $_REQUEST['nombre'];
         $metodologia->descripcion = $_REQUEST['descripcion'];
         $metodologia->url = $_REQUEST['url'];
+        $metodologia->idtipo = $_REQUEST['idtipo'];
         $this->model->Registrar($metodologia);
         header('Location: index.php?c=metodologia');
     }
@@ -71,6 +76,7 @@ class MetodologiaController{
         $metodologia->nombre = $_REQUEST['nombre'];
         $metodologia->descripcion = $_REQUEST['descripcion'];
         $metodologia->url = $_REQUEST['url'];
+        $metodologia->idtipo = $_REQUEST['idtipo'];
         $this->model->Actualizar($metodologia);
         header('Location: index.php?c=metodologia');
     }

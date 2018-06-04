@@ -5,7 +5,8 @@ class metodologia
     public $idmetodologia;
     public $nombre;
     public $descripcion;
-    public $url;
+	public $url;
+	public $idtipo;
 
     /*
     Comstructor para inicializar nuestro PDO
@@ -86,7 +87,8 @@ class metodologia
             $this->pdo->update('metodologias', [
                 'nombre' => $metodologia->nombre,
                 'descripcion' => $metodologia->descripcion,
-                'url' => $metodologia->url    
+				'url' => $metodologia->url,
+				'idtipo' => $metodologia->idtipo
             ], [
                 'idmetodologia' => $metodologia->idmetodologia
             ], [
@@ -109,7 +111,8 @@ class metodologia
             $this->pdo->insert('metodologias', [
                 'nombre' => $metodologia->nombre,
                 'descripcion' => $metodologia->descripcion,
-                'url' => $metodologia->url
+				'url' => $metodologia->url,
+				'idtipo' => $metodologia->idtipo
             ]);
 		} catch (Exception $e)
 		{

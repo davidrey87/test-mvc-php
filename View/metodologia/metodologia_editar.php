@@ -25,6 +25,15 @@
         <label>URL </label>
         <input type="text" name="url" value="<?php echo $metodologia->url; ?>" class="form-control" placeholder="Ingrese URL de la Metodologia" data-validacion-tipo="requerido|min:1" />
     </div>
+    
+    <div class="form-group">
+        <label>Tipo:</label>
+        <select class="form-control" name="idtipo">
+            <?php foreach($this->model_tipo->Listar() as $r): ?>
+            <option value="<?php echo $r['idtipo'];?>" <?php if($metodologia->idtipo==$r['idtipo']) echo 'selected="selected"'; ?>><?php echo $r['nombre']; ?>: <?php echo $r['descripcion']; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
 
     <div class="text-right">
         <button class="btn btn-success">Guardar</button>
