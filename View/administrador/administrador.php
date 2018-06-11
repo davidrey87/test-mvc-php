@@ -1,3 +1,3 @@
 
-<h1> I am the main content </h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint assumenda quae aliquid voluptatibus quia, ea, ad natus magni repellat earum, culpa iure tempore. Enim dolor eaque minima voluptas ducimus?</p>
+<h1> Herramienta de apoyo para seleccion de metodologias </h1>
+<p>Es una herramienta web donde los usuarios contesten un cuestionario para que, según sus respuestas, se le pueda sugerir la metodología más óptima para su proyecto de software.</p>

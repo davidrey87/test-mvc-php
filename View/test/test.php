@@ -1,20 +1,19 @@
-<h1 class="page-header">Test</h1>
-
-<ol class="breadcrumb">
-    <li><a href="?c=administrador">Principal</a></li>
-    <li class="active">Test</li>
-</ol>
-
+<h1 class="page-header">Cuestionario</h1>
 <div>
-    <div>Test</div>
+    <div>
+        <p>Lea la pregunta detenidamente y selecciona la o las respuestas que mas se adapten a tu proyecto de software. Según el nivel de certeza de tus respuestas, al final se te hará una recomendación de que metodología puedes utilizar.</p>    
+    </div>
+
     <?php foreach($this->model_categoria->Listar() as $categoria): ?>
+    <div>
     <div><?php echo $categoria['pregunta']; ?></div>
         <?php foreach($this->model_criterio->Obtener_x_Categoria($categoria['idcategoria']) as $criterio): ?>
-            <div class="form-check">
-				<label>
-					<input type="checkbox" onclick="return OptionSelected(this)" value="<?php echo $criterio['idcriterio']; ?>"> <span class="label-text"><?php echo $criterio['nombre'].': '.$criterio['descripcion']; ?></span>
-				</label>
-			</div>
+            <div class="checkbox checkbox-primary">
+                <input id="checkbox3" class="styled" type="checkbox" onclick="return OptionSelected(this)" value="<?php echo $criterio['idcriterio']; ?>">
+                <label>
+                    <?php echo $criterio['nombre'].': '.$criterio['descripcion']; ?>
+                </label>
+            </div>
         <?php endforeach; ?>
     <?php endforeach; ?>
 
@@ -24,7 +23,7 @@
             <button class="btn btn-success">Enviar</button>
         </div>
     </form>
-
+    </div>
 </div>
 
 <script>
@@ -38,8 +37,11 @@ function OptionSelected(parametro){
             $('input[name="criterios"]').val(valor+','+valores);
         }
     }else{
-        $('input[name="criterios"]').val($('input[name="criterios"]').val().replace(valor+',',""));
+        if(valores.split(",").lenght > 0){
+            $('input[name="criterios"]').val($('input[name="criterios"]').val().replace(valor+',',""));
+        }else{
+            $('input[name="criterios"]').val($('input[name="criterios"]').val().replace(valor,""));
+        }
     }
-
 }
 </script>

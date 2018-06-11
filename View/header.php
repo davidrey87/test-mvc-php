@@ -9,6 +9,7 @@
 
     <link rel='stylesheet prefetch' href='assets/css/bootstrap.min.css'>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/build.css">
 
     <script src="assets/js/jquery-1.11.2.min.js"></script>
     <script src="assets/js/jquery.redirect.js"></script>
@@ -59,7 +60,7 @@
                     <li>
                         <a href="?c=test">
                         <i class="glyphicon glyphicon-paperclip"></i>
-                            Test
+                            Cuestionario
                         </a>
                     </li>
                 </ul>
