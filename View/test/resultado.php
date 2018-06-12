@@ -5,10 +5,6 @@
     <li><a href="?c=test">Test</a></li>
     <li class="active">Resultados</li>
 </ol>
-
-<div>
-    <div>Resultado</div>
-
     <table class="table table-striped">
         <thead>
             <tr>
@@ -29,5 +25,4 @@
         <?php endforeach; ?>
         </tbody>
     </table>
-
-</div>
+    <img src="assets/images/matriz.jpg" class="img-fluid" style="width:100%" alt="Responsive image">
